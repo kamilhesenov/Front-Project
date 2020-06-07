@@ -109,5 +109,3 @@ for (let el of tabLinks) {
 
 
 
-
-

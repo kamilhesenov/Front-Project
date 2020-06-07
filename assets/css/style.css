@@ -1172,7 +1172,7 @@ a {
 #about-us .about-items {
   background-color: #f4f7fc;
   width: 1335px;
-  padding-bottom: 10px;
+  padding-bottom: 100px;
 }
 
 #about-us .about-items .heading {
@@ -1387,5 +1387,68 @@ a {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
+}
+
+#fixed-bg {
+  height: 100vh;
+  margin-top: 50%;
+}
+
+#fixed-bg .fun-factor-area {
+  position: relative;
+  z-index: 1;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #f4f7fc;
+  width: 100%;
+  height: 300px;
+}
+
+#fixed-bg .fun-factor-area .fixed-bg {
+  background-image: url("/assets/img/map.svg");
+  opacity: 0.8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#fixed-bg .fun-factor-area .fixed-bg .client-items {
+  text-align: center !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 150px;
+}
+
+#fixed-bg .fun-factor-area .fixed-bg .client-items .item {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#fixed-bg .fun-factor-area .fixed-bg .client-items .item .fun-fact .timer {
+  display: block;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1;
+  margin-top: -5px;
+  margin-bottom: 15px;
+  color: #232323;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-gradient(linear, left top, right top, from(#031941), to(#437eeb));
+  background: linear-gradient(90deg, #031941 0%, #437eeb 100%);
+  -webkit-background-clip: text;
+}
+
+#fixed-bg .fun-factor-area .fixed-bg .client-items .item .fun-fact .medium {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: -5px;
+  color: #232323;
 }
 /*# sourceMappingURL=style.css.map */
