@@ -60,7 +60,7 @@ $(document).ready(function () {
       touchDrag: true,
       dots: true,
       autoplay: true,
-      autoplayTimeout: 5000,
+      autoplayTimeout: 3000,
       autoplayHoverPause: true,
       responsive: {
         0: {
@@ -76,3 +76,38 @@ $(document).ready(function () {
     });
   }
 });
+
+let tabLinks = document.querySelectorAll(".center-tabs .nav.nav-tabs .nav-item .nav-link");
+let tabPanels = document.querySelectorAll(".tabs-content .tab-pane");
+
+for (let el of tabLinks) {
+  el.addEventListener("click", e => {
+    e.preventDefault();
+
+    document.querySelector(".nav-item .nav-link.active").classList.remove("active");
+    document.querySelector(".tab-pane.show").classList.remove("show");
+
+    let parentListItem = el;
+    parentListItem.classList.add("active");
+     
+    console.log(parentListItem.parentElement.parentElement);
+    let count = el.getAttribute("data-index");
+    
+    let panel = [...tabPanels].filter(el => el.getAttribute("data-index") == count);
+    panel[0].classList.add("show");
+    panel[0].classList.remove("d-none");
+    console.log(panel);
+    for(let item of tabPanels){
+      if(panel[0] !== item){
+        item.classList.add("d-none");
+      }
+    }
+    
+    });
+  }
+
+
+
+
+
+
