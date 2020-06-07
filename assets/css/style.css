@@ -1390,7 +1390,7 @@ a {
 }
 
 #fixed-bg {
-  height: 100vh;
+  height: 300px;
   margin-top: 50%;
 }
 
@@ -1450,5 +1450,261 @@ a {
   font-size: 18px;
   margin-bottom: -5px;
   color: #232323;
+}
+
+#solution {
+  height: 100vh;
+}
+
+#solution .services-area {
+  padding-top: 120px;
+  padding-bottom: 90px;
+  position: relative;
+  z-index: 1;
+}
+
+#solution .services-area::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: -1%;
+  height: 102%;
+  width: 100px;
+  background: #f4f7fc;
+  z-index: -1;
+  border-radius: 50px;
+}
+
+#solution .services-area .shape-fixed {
+  position: absolute;
+  right: 50px;
+  top: 120px;
+}
+
+#solution .services-area .shape-fixed img {
+  -webkit-animation: rotate-animation 10s infinite linear;
+          animation: rotate-animation 10s infinite linear;
+  border: none;
+  outline: none;
+  max-width: 100%;
+}
+
+#solution .services-area .heading-left {
+  margin-bottom: 60px;
+}
+
+#solution .services-area .heading-left h2 {
+  margin: 0;
+  font-weight: 700;
+  margin-top: -8px;
+  font-size: 36px;
+  color: #232323;
+  line-height: 1.2;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0;
+}
+
+#solution .services-area .heading-left p {
+  margin-top: -8px;
+  margin-bottom: 25px;
+  color: #666666;
+  line-height: 28px;
+  margin: 0 0 15px;
+  text-transform: none;
+  font-weight: 400;
+}
+
+#solution .services-area .heading-left .buton {
+  margin-top: 15px;
+}
+
+#solution .services-area .heading-left .buton a {
+  position: relative;
+  margin-right: 10px;
+  border-radius: 30px;
+  padding: 15px 50px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1e55bd), to(#437eeb));
+  background-image: linear-gradient(90deg, #1e55bd 0%, #437eeb 100%);
+  color: #ffffff !important;
+  background-color: #437eeb;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  display: inline-block;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+#solution .services-area .heading-left .buton a:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#437eeb), to(#1e55bd));
+  background-image: linear-gradient(90deg, #437eeb 0%, #1e55bd 100%);
+}
+
+#solution .services-area .heading-left .buton i {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 10px;
+  border-radius: 50%;
+  margin-left: 5px;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  font-weight: 900;
+  position: absolute;
+  left: 25%;
+  bottom: 13px;
+}
+
+#solution .services-area .services-items .single-item {
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#solution .services-area .services-items .single-item .item {
+  -webkit-box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+          box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+  padding: 50px 30px;
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+#solution .services-area .services-items .single-item .item:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#437eeb), to(#093ac1));
+  background: linear-gradient(to bottom, #437eeb 0%, #093ac1 100%);
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+#solution .services-area .services-items .single-item .item:hover h4 {
+  color: #ffffff;
+}
+
+#solution .services-area .services-items .single-item .item:hover p {
+  color: #ffffff;
+}
+
+#solution .services-area .services-items .single-item .item:hover .bottom a {
+  color: #ffffff;
+  padding: 10px 50px;
+  position: relative;
+}
+
+#solution .services-area .services-items .single-item .item:hover i {
+  display: inline-block;
+  height: 27px;
+  width: 27px;
+  line-height: 27px;
+  text-align: center;
+  top: 10px;
+  color: #437eeb;
+  font-size: 15px;
+  border-radius: 50%;
+  position: absolute;
+  left: 7px;
+  -webkit-box-shadow: 0 0 10px #cccccc;
+          box-shadow: 0 0 10px #cccccc;
+  z-index: 1;
+  margin-left: 5px;
+  background: #ffffff;
+}
+
+#solution .services-area .services-items .single-item .item img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 30px;
+  min-height: 100px;
+  max-width: 100%;
+}
+
+#solution .services-area .services-items .single-item .item h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #232323;
+  line-height: 1.2;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0;
+  margin-top: 10px;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+#solution .services-area .services-items .single-item .item p {
+  color: #666666;
+  line-height: 28px;
+  margin: 0 0 15px;
+  text-transform: none;
+  font-weight: 400;
+  margin-top: 10px;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+#solution .services-area .services-items .single-item .item .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 25px;
+}
+
+#solution .services-area .services-items .single-item .item .bottom a {
+  display: inline-block;
+  border: 1px solid #e7e7e7;
+  padding: 10px 40px;
+  border-radius: 30px;
+  color: #437eeb;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+#solution .services-area .services-items .single-item .item .bottom a i {
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
 }
 /*# sourceMappingURL=style.css.map */
