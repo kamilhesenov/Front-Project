@@ -72,7 +72,7 @@
         font-weight: 900;
         position: absolute;
         left: 31%;
-        bottom: 13px;
+        bottom: 116px;
       }
     }
   }
@@ -441,7 +441,8 @@
 }
 // home solution start
 #solution {
-  height: 100vh;
+  height: 900px;
+
   .services-area {
     padding-top: 120px;
     padding-bottom: 90px;
@@ -641,6 +642,183 @@
                 font-variant: normal;
                 text-rendering: auto;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// home work-process start
+#work-process {
+  height: 100vh;
+  background-color: $grey-color;
+  .work-proces-area {
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    .site-heading {
+      margin-bottom: 60px;
+      overflow: hidden;
+      margin-top: -5px;
+      text-align: center !important;
+      width: 150%;
+      h4 {
+        text-transform: uppercase;
+        font-weight: 800;
+        color: $primary-color;
+        font-size: 20px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        line-height: 1.2;
+        font-family: $main_font_family;
+        letter-spacing: 0;
+        margin: 0;
+        margin-bottom: 15px;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 10px;
+          width: 100%;
+          background: $primary-color;
+          z-index: -1;
+          opacity: 0.1;
+        }
+      }
+      h2 {
+        display: block;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 0;
+        font-size: 36px;
+        color: $title-color;
+        line-height: 1.2;
+        font-family: $main_font_family;
+        letter-spacing: 0;
+        margin: 0;
+      }
+    }
+    .works-process-items {
+      position: relative;
+      z-index: 1;
+      margin-top: 10px;
+      text-align: center !important;
+      .single-item {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 10px;
+          background-image: url(/assets/img/direction-sign.png);
+          height: 40px;
+          width: 200px;
+          background-repeat: no-repeat;
+          margin-right: -100px;
+          background-size: contain;
+        }
+        &:last-child::after {
+          display: none;
+        }
+        .item {
+          padding: 0 15px;
+          .icon {
+            height: 179px;
+            position: relative;
+            text-align: center;
+            z-index: 1;
+            display: inline-block;
+            width: 120px;
+            i {
+              background: linear-gradient(
+                90deg,
+                rgba(30, 85, 189, 1) 0%,
+                rgba(67, 126, 235, 1) 100%
+              );
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              border-radius: 50%;
+              color: #ffffff;
+              font-size: 50px;
+              height: 120px;
+              left: 50%;
+              line-height: 120px;
+              margin-left: -60px;
+              position: absolute;
+              text-align: center;
+              top: -10px;
+              width: 120px;
+              z-index: 1;
+              @include transition(all 0.35s ease-in-out);
+            }
+            span {
+              background: #ffffff;
+              position: absolute;
+              right: 0;
+              top: -10px;
+              height: 35px;
+              line-height: 35px;
+              width: 35px;
+              z-index: 1;
+              color: $primary-color;
+              font-weight: 800;
+              font-size: 14px;
+              border-radius: 50%;
+              box-shadow: 0 0 10px #cccccc;
+            }
+          }
+          .info {
+            text-align: center;
+            line-height: 0;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              border-left: 2px dashed #dddddd;
+              top: -50px;
+              height: 40px;
+              left: 50%;
+              @include transition(all 0.35s ease-in-out);
+              width: 1px;
+              z-index: -1;
+              margin-left: -1px;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              height: 15px;
+              width: 15px;
+              border-radius: 50%;
+              border: 2px double #dddddd;
+              top: -67px;
+              left: 48%;
+            }
+            h4 {
+              font-weight: 800;
+              text-transform: capitalize;
+              margin-bottom: 10px;
+              margin-top: 20px;
+              color: $title-color;
+              line-height: 1.2;
+              font-family: $main_font_family;
+              letter-spacing: 0;
+              margin: 0;
+              font-size: 1.5rem;
+            }
+            p {
+              margin-bottom: -5px;
+              color: $body-color;
+              line-height: 28px;
+              text-transform: none;
+              font-weight: 400;
+              margin-top: 10px;
             }
           }
         }

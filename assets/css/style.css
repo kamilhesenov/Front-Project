@@ -1035,7 +1035,7 @@ a {
   font-weight: 900;
   position: absolute;
   left: 31%;
-  bottom: 13px;
+  bottom: 116px;
 }
 
 #intro .img {
@@ -1453,7 +1453,7 @@ a {
 }
 
 #solution {
-  height: 100vh;
+  height: 900px;
 }
 
 #solution .services-area {
@@ -1706,5 +1706,204 @@ a {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+}
+
+#work-process {
+  height: 100vh;
+  background-color: #f4f7fc;
+}
+
+#work-process .work-proces-area {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+#work-process .work-proces-area .site-heading {
+  margin-bottom: 60px;
+  overflow: hidden;
+  margin-top: -5px;
+  text-align: center !important;
+  width: 150%;
+}
+
+#work-process .work-proces-area .site-heading h4 {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #437eeb;
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  line-height: 1.2;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+#work-process .work-proces-area .site-heading h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 10px;
+  width: 100%;
+  background: #437eeb;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+#work-process .work-proces-area .site-heading h2 {
+  display: block;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 0;
+  font-size: 36px;
+  color: #232323;
+  line-height: 1.2;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+#work-process .work-proces-area .works-process-items {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  text-align: center !important;
+}
+
+#work-process .work-proces-area .works-process-items .single-item {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#work-process .work-proces-area .works-process-items .single-item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background-image: url(/assets/img/direction-sign.png);
+  height: 40px;
+  width: 200px;
+  background-repeat: no-repeat;
+  margin-right: -100px;
+  background-size: contain;
+}
+
+#work-process .work-proces-area .works-process-items .single-item:last-child::after {
+  display: none;
+}
+
+#work-process .work-proces-area .works-process-items .single-item .item {
+  padding: 0 15px;
+}
+
+#work-process .work-proces-area .works-process-items .single-item .item .icon {
+  height: 179px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  display: inline-block;
+  width: 120px;
+}
+
+#work-process .work-proces-area .works-process-items .single-item .item .icon i {
+  background: -webkit-gradient(linear, left top, right top, from(#1e55bd), to(#437eeb));
+  background: linear-gradient(90deg, #1e55bd 0%, #437eeb 100%);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 50px;
+  height: 120px;
+  left: 50%;
+  line-height: 120px;
+  margin-left: -60px;
+  position: absolute;
+  text-align: center;
+  top: -10px;
+  width: 120px;
+  z-index: 1;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+}
+
+#work-process .work-proces-area .works-process-items .single-item .item .icon span {
+  background: #ffffff;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  height: 35px;
+  line-height: 35px;
+  width: 35px;
+  z-index: 1;
+  color: #437eeb;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px #cccccc;
+          box-shadow: 0 0 10px #cccccc;
+}
+
+#work-process .work-proces-area .works-process-items .single-item .item .info {
+  text-align: center;
+  line-height: 0;
+  position: relative;
+}
+
+#work-process .work-proces-area .works-process-items .single-item .item .info::before {
+  content: "";
+  position: absolute;
+  border-left: 2px dashed #dddddd;
+  top: -50px;
+  height: 40px;
+  left: 50%;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  -moz-transition: all 0.35s ease-in-out;
+  -ms-transition: all 0.35s ease-in-out;
+  -o-transition: all 0.35s ease-in-out;
+  width: 1px;
+  z-index: -1;
+  margin-left: -1px;
+}
+
+#work-process .work-proces-area .works-process-items .single-item .item .info::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 2px double #dddddd;
+  top: -67px;
+  left: 48%;
+}
+
+#work-process .work-proces-area .works-process-items .single-item .item .info h4 {
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #232323;
+  line-height: 1.2;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 0;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#work-process .work-proces-area .works-process-items .single-item .item .info p {
+  margin-bottom: -5px;
+  color: #666666;
+  line-height: 28px;
+  text-transform: none;
+  font-weight: 400;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */
