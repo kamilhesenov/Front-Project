@@ -75,6 +75,7 @@ $(document).ready(function () {
       },
     });
   }
+  
 });
 
 let tabLinks = document.querySelectorAll(".center-tabs .nav.nav-tabs .nav-item .nav-link");
@@ -90,13 +91,12 @@ for (let el of tabLinks) {
     let parentListItem = el;
     parentListItem.classList.add("active");
      
-    console.log(parentListItem.parentElement.parentElement);
     let count = el.getAttribute("data-index");
     
     let panel = [...tabPanels].filter(el => el.getAttribute("data-index") == count);
     panel[0].classList.add("show");
     panel[0].classList.remove("d-none");
-    console.log(panel);
+    
     for(let item of tabPanels){
       if(panel[0] !== item){
         item.classList.add("d-none");
@@ -105,7 +105,47 @@ for (let el of tabLinks) {
     
     });
   }
+  let tabContent = document.querySelectorAll(".slide .items .item");
+  let tabBtns = document.querySelectorAll(".carousel-indicators li");
+  for(let tabBtn of tabBtns){
+    tabBtn.addEventListener("click",function(e){
+      e.preventDefault();
+
+      document.querySelector(".slide .items .item.active").classList.remove("active");
+      document.querySelector(".carousel-indicators li.active").classList.remove("active");
+
+      let item = tabBtn;
+      item.classList.add("active");
+
+      let index = tabBtn.getAttribute("data-id");
+      let content = [...tabContent].filter(el => el.getAttribute("data-id") == index);
+      content[0].classList.add("active");
+      content[0].classList.remove("remove");
+     
+    })
+  }
+  setInterval(function(){
+    let activ = document.querySelector(".slide .items .item.active");
+    let activBtn = document.querySelector(".carousel-indicators li.active");
+    if(activ.nextElementSibling !==null){
+      document.querySelector(".slide .items .item.active").classList.remove("active");
+      activ.nextElementSibling.classList.add("active");
+    }
+    else{
+      document.querySelector(".slide .items .item:first-child").classList.add("active");
+      document.querySelector(".slide .items .item:last-child").classList.remove("active");
+    }
+    if(activBtn.nextElementSibling !==null){
+      document.querySelector(".carousel-indicators li.active").classList.remove("active");
+      activBtn.nextElementSibling.classList.add("active");
+    }
+    else{
+      document.querySelector(".carousel-indicators li:first-child").classList.add("active");
+      document.querySelector(".carousel-indicators li:last-child").classList.remove("active");
+    }
+    
+  },5000)
 
 
 
-
+  
