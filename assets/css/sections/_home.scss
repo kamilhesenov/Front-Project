@@ -101,6 +101,7 @@
     -webkit-tap-highlight-color: transparent;
     position: relative;
     user-select: none;
+    margin-left: 100px;
     .item {
       margin-top: 25%;
       padding: 50px;
@@ -108,7 +109,7 @@
       box-shadow: 0 0 10px #cccccc;
       background: #ffffff;
       border-radius: 10px;
-      .icon {
+     .icon {
         position: relative;
         z-index: 1;
         display: inline-block;
