@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // header nav-bar start
   $(".navbar-nav .nav-item .nav-link").mouseenter(function () {
     $(this).children().removeClass("fa-angle-down").addClass("fa-angle-up");
   });
@@ -50,6 +51,9 @@ $(document).ready(function () {
     .click(function () {
       $(".navbar-nav .nav-item.bars .side.on").addClass("d-none");
     });
+    // header nav-bar finished
+    
+    // home slider start
   if ($(".slider").length) {
     $(".slider").owlCarousel({
       loop: true,
@@ -75,9 +79,10 @@ $(document).ready(function () {
       },
     });
   }
-  
+  // home slider finished
 });
 
+// home about-us start
 let tabLinks = document.querySelectorAll(".center-tabs .nav.nav-tabs .nav-item .nav-link");
 let tabPanels = document.querySelectorAll(".tabs-content .tab-pane");
 
@@ -105,6 +110,9 @@ for (let el of tabLinks) {
     
     });
   }
+  // home about-us finished
+
+  // home testimonial start
   let tabContent = document.querySelectorAll(".slide .items .item");
   let tabBtns = document.querySelectorAll(".carousel-indicators li");
   for(let tabBtn of tabBtns){
@@ -145,7 +153,6 @@ for (let el of tabLinks) {
     }
     
   },5000)
-
-
+// home testimonial finished
 
   

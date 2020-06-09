@@ -1,6 +1,6 @@
 #nav-bar {
   .navbar {
-    // position: fixed;
+    position: fixed;
     width: 100%;
     z-index: 100;
     box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
@@ -12,15 +12,15 @@
     .navbar-brand {
       position: relative;
       z-index: 1;
-      padding: 20px 15px;
+      padding: 20px 40px;
       padding-left: 100px;
       margin-top: 0;
       &::after {
         content: "";
         position: absolute;
         right: 0;
-        top: -11px;
-        height: 93px;
+        top: -13px;
+        height: 115px;
         width: 500%;
         background: #437eeb;
         z-index: -1;
