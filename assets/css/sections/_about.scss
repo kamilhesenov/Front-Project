@@ -204,3 +204,93 @@
     }
   }
 }
+// about data start
+#data {
+  height: 100vh;
+  padding-top: 50px;
+  .features-liss {
+    position: relative;
+    z-index: 1;
+    background-color: $grey-color;
+    color: #f8f9fa !important;
+    .single-item {
+      margin-bottom: 30px;
+      .item {
+        visibility: visible;
+        box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+        padding: 50px 37px;
+        border-radius: 10px;
+        background: linear-gradient(to bottom, #437eeb 0%, #093ac1 100%);
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        @include transition(all 0.35s ease-in-out);
+        &::before {
+          content: "";
+          position: absolute;
+          right: -50px;
+          top: -50px;
+          height: 150px;
+          width: 150px;
+          background: rgba(255, 255, 155, 0.1);
+          border-radius: 50%;
+          @include transition(all 0.35s ease-in-out);
+        }
+        &::after {
+          position: absolute;
+          right: -50px;
+          top: -50px;
+          content: "";
+          height: 100px;
+          width: 100px;
+          background: rgba(255, 255, 155, 0.1);
+          border-radius: 50%;
+          @include transition(all 0.35s ease-in-out);
+        }
+        &:hover::before {
+          height: 180px;
+          width: 180px;
+        }
+        &:hover::after {
+          height: 120px;
+          width: 120px;
+        }
+        i {
+          display: inline-block;
+          font-size: 60px;
+          margin-bottom: 40px;
+        }
+        h4 {
+          text-transform: capitalize;
+          font-size: 24px;
+          font-weight: 800;
+          margin-bottom: 25px;
+          color: #ffffff;
+          line-height: 1.2;
+          font-family: $main_font_family;
+          letter-spacing: 0;
+          margin: 0;
+        }
+        ul {
+          margin: 0;
+          list-style-type: none;
+          margin-top: 20px;
+          li {
+            display: block;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            padding-left: 25px;
+            &::after {
+              content: "\f058";
+              position: absolute;
+              left: 0;
+              top: 0;
+              font-family: "Font Awesome 5 Free";
+            }
+          }
+        }
+      }
+    }
+  }
+}
