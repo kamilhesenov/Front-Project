@@ -80,6 +80,21 @@ $(document).ready(function () {
     });
   }
   // home slider finished
+  // about header-scroll start
+  if($("#about-header").length){
+    $(window).scroll(function (e) { 
+      e.preventDefault();
+      let scroll = $(window).scrollTop();
+      if(scroll > 10){
+        $("#about-header").removeClass("about-header").addClass("show");
+      }
+      else{
+        $("#about-header").removeClass("show").addClass("about-header");
+      }
+      
+    });
+  }
+  // about header-scroll end
 });
 
 // home about-us start

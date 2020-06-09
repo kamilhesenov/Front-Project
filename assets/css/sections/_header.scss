@@ -1,6 +1,6 @@
 #nav-bar {
   .navbar {
-    // position: fixed;
+    position: fixed;
     width: 100%;
     z-index: 100;
     box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
@@ -22,16 +22,17 @@
         top: -13px;
         height: 115px;
         width: 500%;
-        background: #437eeb;
+        background: $primary-color;
         z-index: -1;
+        @include transition(all 0.35s ease-in-out);
       }
     }
     .navbar-nav {
       list-style: none;
-
       .nav-item {
         display: inline-block;
         padding-left: 20px;
+        @include transition(all 0.35s ease-in-out);
         &.active .nav-link {
           color: $primary-color;
         }
@@ -48,12 +49,14 @@
         }
         .nav-link.search {
           font-size: 20px;
+          @include transition(all 0.35s ease-in-out);
           &:hover {
             color: $title-color;
           }
         }
         .nav-link.bars {
           font-size: 20px;
+          @include transition(all 0.35s ease-in-out);
           &:hover {
             color: $title-color;
           }
