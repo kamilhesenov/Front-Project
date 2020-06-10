@@ -80,6 +80,7 @@ $(document).ready(function () {
     });
   }
   // home slider finished
+  
   // about header-scroll start
   if($("#about-header").length){
     $(window).scroll(function (e) { 
@@ -95,7 +96,47 @@ $(document).ready(function () {
     });
   }
   // about header-scroll end
+
+  // services header-scroll start
+  if($("#services-header").length){
+    $(window).scroll(function (e) { 
+      e.preventDefault();
+      let scroll = $(window).scrollTop();
+      if(scroll > 10){
+        $("#services-header").removeClass("services-header").addClass("show");
+      }
+      else{
+        $("#services-header").removeClass("show").addClass("services-header");
+      }
+      
+    });
+  }
+  // services header-scroll end
+
+  // services carousel start
+  if ($("#services-solution .services-items").length) {
+    $('.owl-carousel').owlCarousel({
+      items: 2,
+      loop: false,
+      nav: false,
+      margin: 7,
+      autoplay: true,
+      responsive: {
+          0: {
+              items: 1
+          },
+          600: {
+              items: 2
+          },
+          1000: {
+              items: 3
+          }
+      }
+  });
+  }
+  // services carousel end
 });
+
 
 // home about-us start
 let tabLinks = document.querySelectorAll(".center-tabs .nav.nav-tabs .nav-item .nav-link");
