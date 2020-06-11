@@ -189,6 +189,27 @@ $(document).ready(function () {
 }
 // blog-standart header-scroll end
 
+// blog-single header-scroll start
+if($("#blog-single-header").length){
+  $(window).scroll(function (e) { 
+    e.preventDefault();
+    let scroll = $(window).scrollTop();
+    if(scroll > 10){
+      $("#blog-single-header").removeClass("blog-single-header").addClass("show");
+      $("#blog-single-header .navbar-brand .logo-light").addClass("d-none");
+      $("#blog-single-header .navbar-brand .logo").removeClass("d-none");
+      
+    }
+    else{
+      $("#blog-single-header").removeClass("show").addClass("blog-single-header");
+      $("#blog-single-header .navbar-brand .logo-light").removeClass("d-none");
+      $("#blog-single-header .navbar-brand .logo").addClass("d-none");
+    }
+    
+    
+  });
+}
+// blog-single header-scroll end
 
 });
 
