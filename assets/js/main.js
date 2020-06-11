@@ -145,6 +145,7 @@ $(document).ready(function () {
   }
   // services carousel end
 
+  // services-single header-scroll start
   if($("#services-single-header").length){
     $(window).scroll(function (e) { 
       e.preventDefault();
@@ -164,19 +165,33 @@ $(document).ready(function () {
       
     });
   }
+ // services-single header-scroll end
 
-  // if($("#services-single-data").length){
-  //   $("#services-single-data .card .card-header").forEach(elem => {
-  //       console.log(elem);
-        
-  //   });
+ // blog-standart header-scroll start
+ if($("#blog-standart-header").length){
+  $(window).scroll(function (e) { 
+    e.preventDefault();
+    let scroll = $(window).scrollTop();
+    if(scroll > 10){
+      $("#blog-standart-header").removeClass("blog-standart-header").addClass("show");
+      $("#blog-standart-header .navbar-brand .logo-light").addClass("d-none");
+      $("#blog-standart-header .navbar-brand .logo").removeClass("d-none");
       
+    }
+    else{
+      $("#blog-standart-header").removeClass("show").addClass("blog-standart-header");
+      $("#blog-standart-header .navbar-brand .logo-light").removeClass("d-none");
+      $("#blog-standart-header .navbar-brand .logo").addClass("d-none");
+    }
     
-  // }
+    
+  });
+}
+// blog-standart header-scroll end
+
+
 });
-// if($("#services-single-data .card .card-body") != null){
-//   // $("#services-single-data .card .card-body").addClass("show");
-// }
+
 
 let headerCard = document.querySelectorAll("#services-single-data .card .card-header");
 
@@ -185,12 +200,10 @@ headerCard.forEach(elem =>{
     e.preventDefault();
     let bodyCard = document.querySelectorAll("#services-single-data .card .card-body");
     let icon = document.querySelectorAll("#services-single-data .card .card-header i")
-    // bodyCard.classList.add("show");
     for(let classValue of elem.nextElementSibling.firstElementChild.classList){
       if(classValue !== "show"){
         elem.nextElementSibling.firstElementChild.classList.toggle("show");
-        console.log(classValue);
-        console.log(icon);
+        
       }
    }
    for(let ikon of icon){
@@ -202,19 +215,19 @@ headerCard.forEach(elem =>{
     }
      
    }
-  //  for(let ikon of elem.lastChild)
-  // for(let ikon of icon){
-  //   if(ikon.classList.contains("fa-eye")){
-  //     ikon.classList.remove("fa-eye");
-  //     ikon.classList.add("fa-eye-slash");
-  //   }
-  //   else{
-  //     ikon.classList.remove("fa-eye-slash");
-  //     ikon.classList.add("fa-eye");
-  //   }
+           //  for(let ikon of elem.lastChild)
+           // for(let ikon of icon){
+           //   if(ikon.classList.contains("fa-eye")){
+           //     ikon.classList.remove("fa-eye");
+           //     ikon.classList.add("fa-eye-slash");
+           //   }
+           //   else{
+           //     ikon.classList.remove("fa-eye-slash");
+           //     ikon.classList.add("fa-eye");
+           //   }
     
     
-  // }
+            // }
     
     for(let cardCollaps of bodyCard){
       if(cardCollaps !== elem.nextElementSibling.firstElementChild){
@@ -284,27 +297,27 @@ for (let el of tabLinks) {
      
     })
   }
-  // setInterval(function(){
-  //   let activ = document.querySelector(".slide .items .item.active");
-  //   let activBtn = document.querySelector(".carousel-indicators li.active");
-  //   if(activ.nextElementSibling !==null){
-  //     document.querySelector(".slide .items .item.active").classList.remove("active");
-  //     activ.nextElementSibling.classList.add("active");
-  //   }
-  //   else{
-  //     document.querySelector(".slide .items .item:first-child").classList.add("active");
-  //     document.querySelector(".slide .items .item:last-child").classList.remove("active");
-  //   }
-  //   if(activBtn.nextElementSibling !==null){
-  //     document.querySelector(".carousel-indicators li.active").classList.remove("active");
-  //     activBtn.nextElementSibling.classList.add("active");
-  //   }
-  //   else{
-  //     document.querySelector(".carousel-indicators li:first-child").classList.add("active");
-  //     document.querySelector(".carousel-indicators li:last-child").classList.remove("active");
-  //   }
+  setInterval(function(){
+    let activ = document.querySelector(".slide .items .item.active");
+    let activBtn = document.querySelector(".carousel-indicators li.active");
+    if(activ.nextElementSibling !==null){
+      document.querySelector(".slide .items .item.active").classList.remove("active");
+      activ.nextElementSibling.classList.add("active");
+    }
+    else{
+      document.querySelector(".slide .items .item:first-child").classList.add("active");
+      document.querySelector(".slide .items .item:last-child").classList.remove("active");
+    }
+    if(activBtn.nextElementSibling !==null){
+      document.querySelector(".carousel-indicators li.active").classList.remove("active");
+      activBtn.nextElementSibling.classList.add("active");
+    }
+    else{
+      document.querySelector(".carousel-indicators li:first-child").classList.add("active");
+      document.querySelector(".carousel-indicators li:last-child").classList.remove("active");
+    }
     
-  // },5000)
+  },5000)
 // home testimonial finished
 
   
