@@ -54,10 +54,10 @@ $(document).ready(function () {
     // header nav-bar finished
     
     // home slider start
-  if ($(".slider").length) {
-    $(".slider").owlCarousel({
+  if ($("#slider").length) {
+    $("#slider .owl-carousel").owlCarousel({
       loop: true,
-      margin: 5,
+      margin: 320,
       nav: false,
       center: false,
       mouseDrag: true,
@@ -88,9 +88,13 @@ $(document).ready(function () {
       let scroll = $(window).scrollTop();
       if(scroll > 10){
         $("#about-header").removeClass("about-header").addClass("show");
+        $("#about-header .navbar-brand .logo-light").addClass("d-none");
+        $("#about-header .navbar-brand .logo").removeClass("d-none");
       }
       else{
         $("#about-header").removeClass("show").addClass("about-header");
+        $("#about-header .navbar-brand .logo-light").removeClass("d-none");
+        $("#about-header .navbar-brand .logo").addClass("d-none");
       }
       
     });
@@ -104,14 +108,19 @@ $(document).ready(function () {
       let scroll = $(window).scrollTop();
       if(scroll > 10){
         $("#services-header").removeClass("services-header").addClass("show");
+        $("#services-header .navbar-brand .logo-light").addClass("d-none");
+        $("#services-header .navbar-brand .logo").removeClass("d-none");
       }
       else{
         $("#services-header").removeClass("show").addClass("services-header");
+        $("#services-header .navbar-brand .logo-light").removeClass("d-none");
+        $("#services-header .navbar-brand .logo").addClass("d-none");
       }
       
     });
   }
   // services header-scroll end
+
 
   // services carousel start
   if ($("#services-solution .services-items").length) {
@@ -135,7 +144,94 @@ $(document).ready(function () {
   });
   }
   // services carousel end
+
+  if($("#services-single-header").length){
+    $(window).scroll(function (e) { 
+      e.preventDefault();
+      let scroll = $(window).scrollTop();
+      if(scroll > 10){
+        $("#services-single-header").removeClass("services-single-header").addClass("show");
+        $("#services-single-header .navbar-brand .logo-light").addClass("d-none");
+        $("#services-single-header .navbar-brand .logo").removeClass("d-none");
+        
+      }
+      else{
+        $("#services-single-header").removeClass("show").addClass("services-single-header");
+        $("#services-single-header .navbar-brand .logo-light").removeClass("d-none");
+        $("#services-single-header .navbar-brand .logo").addClass("d-none");
+      }
+      
+      
+    });
+  }
+
+  // if($("#services-single-data").length){
+  //   $("#services-single-data .card .card-header").forEach(elem => {
+  //       console.log(elem);
+        
+  //   });
+      
+    
+  // }
 });
+// if($("#services-single-data .card .card-body") != null){
+//   // $("#services-single-data .card .card-body").addClass("show");
+// }
+
+let headerCard = document.querySelectorAll("#services-single-data .card .card-header");
+
+headerCard.forEach(elem =>{
+  elem.addEventListener("click",function(e){
+    e.preventDefault();
+    let bodyCard = document.querySelectorAll("#services-single-data .card .card-body");
+    let icon = document.querySelectorAll("#services-single-data .card .card-header i")
+    // bodyCard.classList.add("show");
+    for(let classValue of elem.nextElementSibling.firstElementChild.classList){
+      if(classValue !== "show"){
+        elem.nextElementSibling.firstElementChild.classList.toggle("show");
+        console.log(classValue);
+        console.log(icon);
+      }
+   }
+   for(let ikon of icon){
+    if(ikon.classList.contains("fa-eye")){
+      ikon.classList.replace("fa-eye","fa-eye-slash");
+    }
+    else{
+      ikon.classList.replace("fa-eye-slash","fa-eye");
+    }
+     
+   }
+  //  for(let ikon of elem.lastChild)
+  // for(let ikon of icon){
+  //   if(ikon.classList.contains("fa-eye")){
+  //     ikon.classList.remove("fa-eye");
+  //     ikon.classList.add("fa-eye-slash");
+  //   }
+  //   else{
+  //     ikon.classList.remove("fa-eye-slash");
+  //     ikon.classList.add("fa-eye");
+  //   }
+    
+    
+  // }
+    
+    for(let cardCollaps of bodyCard){
+      if(cardCollaps !== elem.nextElementSibling.firstElementChild){
+        cardCollaps.classList.add("show");
+        
+        
+      }
+    }
+  })
+})
+
+// headerCard.addEventListener("click",function(e){
+//   e.preventDefault();
+//   let bodyCard = document.querySelectorAll("#services-single-data .card .card-body");
+//   console.log(bodyCard);
+  
+// })
 
 
 // home about-us start
@@ -188,27 +284,27 @@ for (let el of tabLinks) {
      
     })
   }
-  setInterval(function(){
-    let activ = document.querySelector(".slide .items .item.active");
-    let activBtn = document.querySelector(".carousel-indicators li.active");
-    if(activ.nextElementSibling !==null){
-      document.querySelector(".slide .items .item.active").classList.remove("active");
-      activ.nextElementSibling.classList.add("active");
-    }
-    else{
-      document.querySelector(".slide .items .item:first-child").classList.add("active");
-      document.querySelector(".slide .items .item:last-child").classList.remove("active");
-    }
-    if(activBtn.nextElementSibling !==null){
-      document.querySelector(".carousel-indicators li.active").classList.remove("active");
-      activBtn.nextElementSibling.classList.add("active");
-    }
-    else{
-      document.querySelector(".carousel-indicators li:first-child").classList.add("active");
-      document.querySelector(".carousel-indicators li:last-child").classList.remove("active");
-    }
+  // setInterval(function(){
+  //   let activ = document.querySelector(".slide .items .item.active");
+  //   let activBtn = document.querySelector(".carousel-indicators li.active");
+  //   if(activ.nextElementSibling !==null){
+  //     document.querySelector(".slide .items .item.active").classList.remove("active");
+  //     activ.nextElementSibling.classList.add("active");
+  //   }
+  //   else{
+  //     document.querySelector(".slide .items .item:first-child").classList.add("active");
+  //     document.querySelector(".slide .items .item:last-child").classList.remove("active");
+  //   }
+  //   if(activBtn.nextElementSibling !==null){
+  //     document.querySelector(".carousel-indicators li.active").classList.remove("active");
+  //     activBtn.nextElementSibling.classList.add("active");
+  //   }
+  //   else{
+  //     document.querySelector(".carousel-indicators li:first-child").classList.add("active");
+  //     document.querySelector(".carousel-indicators li:last-child").classList.remove("active");
+  //   }
     
-  },5000)
+  // },5000)
 // home testimonial finished
 
   
