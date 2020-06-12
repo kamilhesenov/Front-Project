@@ -1,6 +1,6 @@
 #nav-bar {
   .navbar {
-    // position: fixed;
+    position: fixed;
     width: 100%;
     z-index: 100;
     box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
@@ -81,6 +81,23 @@
           border-radius: 4px;
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
           @include transition(all 0.35s ease-in-out);
+          span {
+            padding: 3px 10px;
+            font-weight: 600;
+            margin-left: 4px;
+            background: $primary-color;
+            color: #ffffff;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 75%;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            transition: color 0.15s ease-in-out,
+              background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+              box-shadow 0.15s ease-in-out;
+          }
           ul {
             list-style: none;
             li {

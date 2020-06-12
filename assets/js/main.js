@@ -211,6 +211,28 @@ if($("#blog-single-header").length){
 }
 // blog-single header-scroll end
 
+// contact-us header-scroll start
+if($("#contact-us-header").length){
+  $(window).scroll(function (e) { 
+    e.preventDefault();
+    let scroll = $(window).scrollTop();
+    if(scroll > 10){
+      $("#contact-us-header").removeClass("contact-us-header").addClass("show");
+      $("#contact-us-header .navbar-brand .logo-light").addClass("d-none");
+      $("#contact-us-header .navbar-brand .logo").removeClass("d-none");
+      
+    }
+    else{
+      $("#contact-us-header").removeClass("show").addClass("contact-us-header");
+      $("#contact-us-header .navbar-brand .logo-light").removeClass("d-none");
+      $("#contact-us-header .navbar-brand .logo").addClass("d-none");
+    }
+    
+    
+  });
+}
+// contact-us header-scroll end
+
 });
 
 

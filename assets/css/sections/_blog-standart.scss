@@ -17,18 +17,8 @@
       padding: 20px 40px;
       padding-left: 100px;
       margin-top: 0;
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: -13px;
-        height: 115px;
-        width: 500%;
-        z-index: -1;
-        @include transition(all 0.35s ease-in-out);
       }
-    }
-    .navbar-nav {
+     .navbar-nav {
       list-style: none;
       .nav-item {
         display: inline-block;
@@ -570,6 +560,8 @@
     position: relative;
     z-index: 1;
     .blog-items {
+      margin: 0;
+      margin-left: 100px;
       .blog-content {
         position: relative;
         width: 100%;
