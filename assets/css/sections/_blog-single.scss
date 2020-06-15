@@ -27,6 +27,31 @@
         &.active .nav-link {
           color: #fff;
         }
+        &:hover .home-menu{
+          visibility: visible;
+           opacity: 1;
+           @include transition(all 0.35s ease-in-out);
+        }
+        &:hover .company-menu{
+          visibility: visible;
+           opacity: 1;
+           @include transition(all 0.35s ease-in-out);
+        }
+        &:hover .service-menu{
+          visibility: visible;
+           opacity: 1;
+           @include transition(all 0.35s ease-in-out);
+        }
+        &:hover .case-menu{
+          visibility: visible;
+           opacity: 1;
+           @include transition(all 0.35s ease-in-out);
+        }
+        &:hover .blog-menu{
+          visibility: visible;
+           opacity: 1;
+           @include transition(all 0.35s ease-in-out);
+        }
         .nav-link {
           color: #fff;
           position: relative;
@@ -63,6 +88,8 @@
           border: 1px solid rgba(0, 0, 0, 0.15);
           border-radius: 4px;
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          visibility: hidden;
+          opacity: 0;
           @include transition(all 0.35s ease-in-out);
           span {
             padding: 3px 10px;
@@ -121,6 +148,8 @@
           border: 1px solid rgba(0, 0, 0, 0.15);
           border-radius: 4px;
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          visibility: hidden;
+          opacity: 0;
           @include transition(all 0.35s ease-in-out);
           ul {
             list-style: none;
@@ -162,6 +191,8 @@
           border: 1px solid rgba(0, 0, 0, 0.15);
           border-radius: 4px;
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          visibility: hidden;
+          opacity: 0;
           @include transition(all 0.35s ease-in-out);
           ul {
             list-style: none;
@@ -203,6 +234,8 @@
           border: 1px solid rgba(0, 0, 0, 0.15);
           border-radius: 4px;
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          visibility: hidden;
+          opacity: 0;
           @include transition(all 0.35s ease-in-out);
           ul {
             list-style: none;
@@ -244,6 +277,8 @@
           border: 1px solid rgba(0, 0, 0, 0.15);
           border-radius: 4px;
           box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          visibility: hidden;
+          opacity: 0;
           @include transition(all 0.35s ease-in-out);
           ul {
             list-style: none;
@@ -934,6 +969,9 @@
                         font-family: $main_font_family;
                         outline: none;
                         background-color: transparent;
+                        &:hover{
+                          color: $primary-color;
+                        }
                         i {
                           margin-right: 10px;
                           font-weight: 900;
